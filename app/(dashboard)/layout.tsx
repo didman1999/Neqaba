@@ -52,9 +52,9 @@ export default function DashboardLayout({
         mobileOpen={mobileOpen}
         onClose={() => setMobileOpen(false)}
       />
-      <div className="main-content flex-1">
+      <div className="main-content flex-1 flex flex-col min-w-0 w-full overflow-hidden">
         <Header user={user} onMenuClick={() => setMobileOpen(true)} />
-        <main className="flex-1 p-4 md:p-6 page-enter">
+        <main className="flex-1 p-4 md:p-6 page-enter overflow-y-auto">
           {children}
         </main>
       </div>

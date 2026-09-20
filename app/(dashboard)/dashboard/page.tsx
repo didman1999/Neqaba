@@ -136,7 +136,7 @@ export default function DashboardPage() {
 
       {/* Filters */}
       <div className="bg-white rounded-xl border border-gray-200 p-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
           <div>
             <label className="text-xs font-medium text-gray-500 block mb-1">الشهر</label>
             <select
@@ -186,7 +186,7 @@ export default function DashboardPage() {
 
       {/* Stat Cards */}
       {loading ? (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {Array.from({ length: 8 }).map((_, i) => (
             <div key={i} className="stat-card">
               <div className="skeleton w-12 h-12 rounded-xl mb-3" />
@@ -196,7 +196,7 @@ export default function DashboardPage() {
           ))}
         </div>
       ) : stats ? (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <StatCard
             title="إجمالي الموظفين"
             value={stats.totalEmployees}
